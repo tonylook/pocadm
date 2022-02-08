@@ -1,0 +1,32 @@
+{
+  "applications": ["pocadm"],
+  "changelogDate": "20220208135219",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vessel_time_contract",
+  "fields": [
+    {
+      "fieldName": "holds",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "holdCapacity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "period",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "costPerDay",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VesselTimeContract",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

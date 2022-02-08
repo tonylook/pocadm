@@ -1,0 +1,29 @@
+{
+  "pocadmApp": {
+    "purchaseContract": {
+      "home": {
+        "title": "Purchase Contracts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Purchase Contract",
+        "createOrEditLabel": "Create or edit a Purchase Contract",
+        "notFound": "No Purchase Contracts found"
+      },
+      "created": "A new Purchase Contract is created with identifier {{ param }}",
+      "updated": "A Purchase Contract is updated with identifier {{ param }}",
+      "deleted": "A Purchase Contract is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Purchase Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "Purchase Contract"
+      },
+      "id": "ID",
+      "purchasingWindow": "Purchasing Window",
+      "soymealQuality": "Soymeal Quality",
+      "price": "Price",
+      "volume": "Volume",
+      "status": "Status",
+      "port": "Port"
+    }
+  }
+}

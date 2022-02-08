@@ -1,0 +1,40 @@
+{
+  "applications": ["pocadm"],
+  "changelogDate": "20220208135218",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vessel_voyage_contract",
+  "fields": [
+    {
+      "fieldName": "holds",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "holdCapacity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "source",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "destination",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "period",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VesselVoyageContract",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

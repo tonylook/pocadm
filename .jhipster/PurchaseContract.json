@@ -1,0 +1,45 @@
+{
+  "applications": ["pocadm"],
+  "changelogDate": "20220208135216",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "purchase_contract",
+  "fields": [
+    {
+      "fieldName": "purchasingWindow",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "soymealQuality",
+      "fieldType": "Quality",
+      "fieldValues": "BAD (bad),GOOD (good),TOP (top)"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "volume",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PurchaseContract",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "port",
+      "otherEntityRelationshipName": "purchaseContract",
+      "relationshipName": "port",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}
