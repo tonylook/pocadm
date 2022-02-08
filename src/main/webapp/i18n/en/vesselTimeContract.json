@@ -1,0 +1,27 @@
+{
+  "pocadmApp": {
+    "vesselTimeContract": {
+      "home": {
+        "title": "Vessel Time Contracts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vessel Time Contract",
+        "createOrEditLabel": "Create or edit a Vessel Time Contract",
+        "notFound": "No Vessel Time Contracts found"
+      },
+      "created": "A new Vessel Time Contract is created with identifier {{ param }}",
+      "updated": "A Vessel Time Contract is updated with identifier {{ param }}",
+      "deleted": "A Vessel Time Contract is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vessel Time Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "Vessel Time Contract"
+      },
+      "id": "ID",
+      "holds": "Holds",
+      "holdCapacity": "Hold Capacity",
+      "period": "Period",
+      "costPerDay": "Cost Per Day"
+    }
+  }
+}

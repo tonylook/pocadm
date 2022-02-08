@@ -1,0 +1,28 @@
+{
+  "applications": ["pocadm"],
+  "changelogDate": "20220208135220",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "port",
+  "fields": [
+    {
+      "fieldName": "lodingTime",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "unloadingTime",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "waitingTime",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Port",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,29 @@
+{
+  "pocadmApp": {
+    "vesselVoyageContract": {
+      "home": {
+        "title": "Vessel Voyage Contracts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vessel Voyage Contract",
+        "createOrEditLabel": "Create or edit a Vessel Voyage Contract",
+        "notFound": "No Vessel Voyage Contracts found"
+      },
+      "created": "A new Vessel Voyage Contract is created with identifier {{ param }}",
+      "updated": "A Vessel Voyage Contract is updated with identifier {{ param }}",
+      "deleted": "A Vessel Voyage Contract is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vessel Voyage Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "Vessel Voyage Contract"
+      },
+      "id": "ID",
+      "holds": "Holds",
+      "holdCapacity": "Hold Capacity",
+      "source": "Source",
+      "destination": "Destination",
+      "period": "Period",
+      "cost": "Cost"
+    }
+  }
+}
