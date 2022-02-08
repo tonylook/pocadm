@@ -1,0 +1,72 @@
+
+application {
+  config {
+    baseName pocadm,
+    applicationType monolith,
+    packageName ch.orange,
+    databaseType sql,
+    prodDatabaseType postgresql,
+    clientFramework react,
+    buildTool maven,
+    authenticationType session,
+    cacheProvider no,
+    enableTranslation true,
+    languages [en]
+    }
+  dto * with mapstruct
+  service * with serviceImpl
+  entities *
+}
+
+entity PurchaseContract {
+purchasingWindow Long,
+soymealQuality Quality,
+price BigDecimal,
+volume Float,
+status Boolean
+}
+
+entity SaleContract {
+deliveryWindow Long,
+soymealQuality Quality,
+price BigDecimal,
+volume Float,
+allowances Float,
+status Boolean
+}
+
+entity VesselVoyageContract {
+holds Integer,
+holdCapacity Float,
+source String,
+destination String,
+period Long,
+cost BigDecimal
+}
+
+entity VesselTimeContract {
+holds Integer,
+holdCapacity Float,
+period Long,
+costPerDay BigDecimal
+
+}
+
+entity Port {
+lodingTime Long,
+unloadingTime Long,
+waitingTime Float
+//travel time TBD
+}
+
+enum Quality {
+  BAD (bad),
+  GOOD (good),
+  TOP (top)
+}
+
+relationship ManyToOne {
+  PurchaseContract{port required} to Port
+  SaleContract{port required} to Port
+}
+    
