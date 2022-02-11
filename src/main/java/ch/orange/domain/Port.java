@@ -18,8 +18,8 @@ public class Port implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "loding_time")
-    private Long lodingTime;
+    @Column(name = "loading_time")
+    private Long loadingTime;
 
     @Column(name = "unloading_time")
     private Long unloadingTime;
@@ -42,17 +42,17 @@ public class Port implements Serializable {
         this.id = id;
     }
 
-    public Long getLodingTime() {
-        return this.lodingTime;
+    public Long getLoadingTime() {
+        return this.loadingTime;
     }
 
-    public Port lodingTime(Long lodingTime) {
-        this.setLodingTime(lodingTime);
+    public Port loadingTime(Long loadingTime) {
+        this.setLoadingTime(loadingTime);
         return this;
     }
 
-    public void setLodingTime(Long lodingTime) {
-        this.lodingTime = lodingTime;
+    public void setLoadingTime(Long loadingTime) {
+        this.loadingTime = loadingTime;
     }
 
     public Long getUnloadingTime() {
@@ -105,7 +105,7 @@ public class Port implements Serializable {
     public String toString() {
         return "Port{" +
             "id=" + getId() +
-            ", lodingTime=" + getLodingTime() +
+            ", loadingTime=" + getLoadingTime() +
             ", unloadingTime=" + getUnloadingTime() +
             ", waitingTime=" + getWaitingTime() +
             "}";

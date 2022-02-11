@@ -18,7 +18,7 @@
         "title": "Port"
       },
       "id": "ID",
-      "lodingTime": "Loding Time",
+      "loadingTime": "Loading Time",
       "unloadingTime": "Unloading Time",
       "waitingTime": "Waiting Time"
     }
