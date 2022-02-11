@@ -30,11 +30,11 @@ export const PortDetail = (props: RouteComponentProps<{ id: string }>) => {
           </dt>
           <dd>{portEntity.id}</dd>
           <dt>
-            <span id="loadingTime">
-              <Translate contentKey="pocadmApp.port.loadingTime">Loading Time</Translate>
+            <span id="lodingTime">
+              <Translate contentKey="pocadmApp.port.lodingTime">Loding Time</Translate>
             </span>
           </dt>
-          <dd>{portEntity.loadingTime}</dd>
+          <dd>{portEntity.lodingTime}</dd>
           <dt>
             <span id="unloadingTime">
               <Translate contentKey="pocadmApp.port.unloadingTime">Unloading Time</Translate>

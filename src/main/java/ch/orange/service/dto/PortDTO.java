@@ -10,7 +10,7 @@ public class PortDTO implements Serializable {
 
     private Long id;
 
-    private Long loadingTime;
+    private Long lodingTime;
 
     private Long unloadingTime;
 
@@ -24,12 +24,12 @@ public class PortDTO implements Serializable {
         this.id = id;
     }
 
-    public Long getLoadingTime() {
-        return loadingTime;
+    public Long getLodingTime() {
+        return lodingTime;
     }
 
-    public void setLoadingTime(Long loadingTime) {
-        this.loadingTime = loadingTime;
+    public void setLodingTime(Long lodingTime) {
+        this.lodingTime = lodingTime;
     }
 
     public Long getUnloadingTime() {
@@ -74,7 +74,7 @@ public class PortDTO implements Serializable {
     public String toString() {
         return "PortDTO{" +
             "id=" + getId() +
-            ", loadingTime=" + getLoadingTime() +
+            ", lodingTime=" + getLodingTime() +
             ", unloadingTime=" + getUnloadingTime() +
             ", waitingTime=" + getWaitingTime() +
             "}";

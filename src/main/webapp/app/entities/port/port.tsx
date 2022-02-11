@@ -50,7 +50,7 @@ export const Port = (props: RouteComponentProps<{ url: string }>) => {
                   <Translate contentKey="pocadmApp.port.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="pocadmApp.port.loadingTime">Loading Time</Translate>
+                  <Translate contentKey="pocadmApp.port.lodingTime">Loding Time</Translate>
                 </th>
                 <th>
                   <Translate contentKey="pocadmApp.port.unloadingTime">Unloading Time</Translate>
@@ -69,7 +69,7 @@ export const Port = (props: RouteComponentProps<{ url: string }>) => {
                       {port.id}
                     </Button>
                   </td>
-                  <td>{port.loadingTime}</td>
+                  <td>{port.lodingTime}</td>
                   <td>{port.unloadingTime}</td>
                   <td>{port.waitingTime}</td>
                   <td className="text-end">

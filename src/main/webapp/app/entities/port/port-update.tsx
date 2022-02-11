@@ -83,10 +83,10 @@ export const PortUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 />
               ) : null}
               <ValidatedField
-                label={translate('pocadmApp.port.loadingTime')}
-                id="port-loadingTime"
-                name="loadingTime"
-                data-cy="loadingTime"
+                label={translate('pocadmApp.port.lodingTime')}
+                id="port-lodingTime"
+                name="lodingTime"
+                data-cy="lodingTime"
                 type="text"
               />
               <ValidatedField

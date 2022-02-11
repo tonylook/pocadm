@@ -32,8 +32,8 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class PortResourceIT {
 
-    private static final Long DEFAULT_LOADING_TIME = 1L;
-    private static final Long UPDATED_LOADING_TIME = 2L;
+    private static final Long DEFAULT_LODING_TIME = 1L;
+    private static final Long UPDATED_LODING_TIME = 2L;
 
     private static final Long DEFAULT_UNLOADING_TIME = 1L;
     private static final Long UPDATED_UNLOADING_TIME = 2L;
@@ -68,7 +68,7 @@ class PortResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Port createEntity(EntityManager em) {
-        Port port = new Port().loadingTime(DEFAULT_LOADING_TIME).unloadingTime(DEFAULT_UNLOADING_TIME).waitingTime(DEFAULT_WAITING_TIME);
+        Port port = new Port().lodingTime(DEFAULT_LODING_TIME).unloadingTime(DEFAULT_UNLOADING_TIME).waitingTime(DEFAULT_WAITING_TIME);
         return port;
     }
 
@@ -79,7 +79,7 @@ class PortResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Port createUpdatedEntity(EntityManager em) {
-        Port port = new Port().loadingTime(UPDATED_LOADING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
+        Port port = new Port().lodingTime(UPDATED_LODING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
         return port;
     }
 
@@ -107,7 +107,7 @@ class PortResourceIT {
         List<Port> portList = portRepository.findAll();
         assertThat(portList).hasSize(databaseSizeBeforeCreate + 1);
         Port testPort = portList.get(portList.size() - 1);
-        assertThat(testPort.getLoadingTime()).isEqualTo(DEFAULT_LOADING_TIME);
+        assertThat(testPort.getLodingTime()).isEqualTo(DEFAULT_LODING_TIME);
         assertThat(testPort.getUnloadingTime()).isEqualTo(DEFAULT_UNLOADING_TIME);
         assertThat(testPort.getWaitingTime()).isEqualTo(DEFAULT_WAITING_TIME);
     }
@@ -148,7 +148,7 @@ class PortResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(port.getId().intValue())))
-            .andExpect(jsonPath("$.[*].loadingTime").value(hasItem(DEFAULT_LOADING_TIME.intValue())))
+            .andExpect(jsonPath("$.[*].lodingTime").value(hasItem(DEFAULT_LODING_TIME.intValue())))
             .andExpect(jsonPath("$.[*].unloadingTime").value(hasItem(DEFAULT_UNLOADING_TIME.intValue())))
             .andExpect(jsonPath("$.[*].waitingTime").value(hasItem(DEFAULT_WAITING_TIME.doubleValue())));
     }
@@ -165,7 +165,7 @@ class PortResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(port.getId().intValue()))
-            .andExpect(jsonPath("$.loadingTime").value(DEFAULT_LOADING_TIME.intValue()))
+            .andExpect(jsonPath("$.lodingTime").value(DEFAULT_LODING_TIME.intValue()))
             .andExpect(jsonPath("$.unloadingTime").value(DEFAULT_UNLOADING_TIME.intValue()))
             .andExpect(jsonPath("$.waitingTime").value(DEFAULT_WAITING_TIME.doubleValue()));
     }
@@ -189,7 +189,7 @@ class PortResourceIT {
         Port updatedPort = portRepository.findById(port.getId()).get();
         // Disconnect from session so that the updates on updatedPort are not directly saved in db
         em.detach(updatedPort);
-        updatedPort.loadingTime(UPDATED_LOADING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
+        updatedPort.lodingTime(UPDATED_LODING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
         PortDTO portDTO = portMapper.toDto(updatedPort);
 
         restPortMockMvc
@@ -205,7 +205,7 @@ class PortResourceIT {
         List<Port> portList = portRepository.findAll();
         assertThat(portList).hasSize(databaseSizeBeforeUpdate);
         Port testPort = portList.get(portList.size() - 1);
-        assertThat(testPort.getLoadingTime()).isEqualTo(UPDATED_LOADING_TIME);
+        assertThat(testPort.getLodingTime()).isEqualTo(UPDATED_LODING_TIME);
         assertThat(testPort.getUnloadingTime()).isEqualTo(UPDATED_UNLOADING_TIME);
         assertThat(testPort.getWaitingTime()).isEqualTo(UPDATED_WAITING_TIME);
     }
@@ -291,7 +291,7 @@ class PortResourceIT {
         Port partialUpdatedPort = new Port();
         partialUpdatedPort.setId(port.getId());
 
-        partialUpdatedPort.loadingTime(UPDATED_LOADING_TIME).unloadingTime(UPDATED_UNLOADING_TIME);
+        partialUpdatedPort.lodingTime(UPDATED_LODING_TIME).unloadingTime(UPDATED_UNLOADING_TIME);
 
         restPortMockMvc
             .perform(
@@ -306,7 +306,7 @@ class PortResourceIT {
         List<Port> portList = portRepository.findAll();
         assertThat(portList).hasSize(databaseSizeBeforeUpdate);
         Port testPort = portList.get(portList.size() - 1);
-        assertThat(testPort.getLoadingTime()).isEqualTo(UPDATED_LOADING_TIME);
+        assertThat(testPort.getLodingTime()).isEqualTo(UPDATED_LODING_TIME);
         assertThat(testPort.getUnloadingTime()).isEqualTo(UPDATED_UNLOADING_TIME);
         assertThat(testPort.getWaitingTime()).isEqualTo(DEFAULT_WAITING_TIME);
     }
@@ -323,7 +323,7 @@ class PortResourceIT {
         Port partialUpdatedPort = new Port();
         partialUpdatedPort.setId(port.getId());
 
-        partialUpdatedPort.loadingTime(UPDATED_LOADING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
+        partialUpdatedPort.lodingTime(UPDATED_LODING_TIME).unloadingTime(UPDATED_UNLOADING_TIME).waitingTime(UPDATED_WAITING_TIME);
 
         restPortMockMvc
             .perform(
@@ -338,7 +338,7 @@ class PortResourceIT {
         List<Port> portList = portRepository.findAll();
         assertThat(portList).hasSize(databaseSizeBeforeUpdate);
         Port testPort = portList.get(portList.size() - 1);
-        assertThat(testPort.getLoadingTime()).isEqualTo(UPDATED_LOADING_TIME);
+        assertThat(testPort.getLodingTime()).isEqualTo(UPDATED_LODING_TIME);
         assertThat(testPort.getUnloadingTime()).isEqualTo(UPDATED_UNLOADING_TIME);
         assertThat(testPort.getWaitingTime()).isEqualTo(UPDATED_WAITING_TIME);
     }
