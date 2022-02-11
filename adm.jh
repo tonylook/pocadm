@@ -53,7 +53,7 @@ costPerDay BigDecimal
 }
 
 entity Port {
-lodingTime Long,
+loadingTime Long,
 unloadingTime Long,
 waitingTime Float
 //travel time TBD

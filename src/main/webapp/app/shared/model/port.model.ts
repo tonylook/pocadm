@@ -1,6 +1,6 @@
 export interface IPort {
   id?: number;
-  lodingTime?: number | null;
+  loadingTime?: number | null;
   unloadingTime?: number | null;
   waitingTime?: number | null;
 }
