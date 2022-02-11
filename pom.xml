@@ -44,6 +44,7 @@
         <profile.tls />
 
         <!-- Dependency versions -->
+        <poi.version>5.2.0</poi.version>
         <jhipster-dependencies.version>7.6.0</jhipster-dependencies.version>
         <!-- The spring-boot version should match the one managed by
         https://mvnrepository.com/artifact/tech.jhipster/jhipster-dependencies/${jhipster-dependencies.version} -->
@@ -104,6 +105,13 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- BEGIN dependencies added after Jhipster -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <!-- END dependencies added after Jhipster -->
         <dependency>
             <groupId>tech.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
